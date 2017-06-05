@@ -1,0 +1,147 @@
+body {
+    font-family:     Tahoma, Helvetica, Sans-Serif;
+    color: #454545;
+    font-size: 11px;
+    line-height: 20px;
+    margin-bottom: 15px;
+}
+
+select {
+    font-family: Tahoma, Helvetica, Sans-Serif;
+    color: #454545;
+    font-size: 11px;
+    line-height: 20px;
+    margin-bottom: 15px;
+}
+#container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#content {
+    position: absolute;
+    left: 200px;
+    right: 0px;
+    top:0px;
+    bottom:0px;
+}
+#navbar {
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    overflow-y: scroll;
+}
+.button{
+    padding: 2px 5px;
+    border-radius: 4px;
+    border: solid 1px #20548D;
+    background: #4479BB;
+    color: #FFF;
+
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+
+    cursor: default;
+
+}
+.button:hover {
+    background: #356194;
+    border: solid 1px #2A4D77;
+    text-decoration: none;
+    cursor: default;
+}
+.button:active {
+    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    background: #2E5482;
+    border: solid 1px #213E5F;
+    cursor: default;
+}
+
+.whiteText{
+    color:#FFFFFF;
+    font-weight:bold;
+}
+
+
+/*for dojo*/
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow:hidden;
+}
+
+#borderContainer {
+    width: 100%;
+    height: 100%;
+}
+/* pre-loader specific stuff to prevent unsightly flash of unstyled content */
+#loader {
+    padding:0;
+    margin:0;
+
+    width:100%; height:100%;
+    background:#ededed;
+    z-index:999;
+    vertical-align:middle;
+
+}
+#loaderInner {
+    padding:5px;
+    position:relative;
+    left:40%;
+    top:40%;
+    height: 125px;
+    width:300px;
+    background:#3c3;
+    font-size: 18px;
+    font-weight: bold;
+    color:#fff;
+}
+
+
+
+.SiblingColumnsColumnGroups_columnGroupStyle{
+    text-align:left;
+    padding-left:15px;
+}
+
+.themePreview{
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background: #bbbbbb;
+    border: 2px solid #ffffff;
+    padding: 10px;
+    padding-bottom: 0px;
+    margin: 10px;
+}
+.x-panel-body{
+    border: 0px;
+}
+.flexiciousGrid .x-toolbar .x-btn-with-menu .x-btn-center em
+{
+    width: 183px;
+}
+.flexiciousGrid  .x-menu
+{
+    width: 167px;
+}
+.dijitTreeExpandoClosed{
+    visibility: hidden;
+}

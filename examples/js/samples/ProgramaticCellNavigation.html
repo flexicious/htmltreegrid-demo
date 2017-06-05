@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Programmatic Cell Navigation</title>
+    <script type="text/javascript">
+
+        function programmaticCellNavigation_handleSelectItem(evt) {
+            var grid=window.parent.grid;
+            if(!grid.isItemSelected(cbxNav.value,false))
+                grid.addSelectedItem(cbxNav.value);
+        }
+
+        function programmaticCellNavigation_handleClearSelection(evt) {
+            var grid=window.parent.grid;
+            grid.clearSelection();
+        }
+
+        function programmaticCellNavigation_keyDownHandler(evt) {
+            var grid=window.parent.grid;
+            if(event.keyCode== flxConstants.KEYBOARD.ENTER){
+                if(event.shiftKey){
+                    if(currentMatch>1)
+                        currentMatch--;
+                }
+                else if(currentMatch<matchedObjects.length){
+                    currentMatch++;
+                }
+                if(textMatched!=txtFind.getText()){
+                    textMatched=txtFind.getText();
+                    matchedObjects=[];
+                    var matchedObject = grid.quickFind(txtFind.getText());
+                    for (var i=0;i<matchedObject.length;i++)
+                        matchedObjects.push(matchedObject);
+                    currentMatch=1;
+                }
+                if(currentMatch<=matchedObjects.length && currentMatch>0){
+                    grid.gotoItem(matchedObjects[currentMatch-1],true);
+                    grid.selectText(textMatched);
+                }
+            }
+        };
+        function programmaticCellNavigation_txtFindChangeHandler(evt) {
+
+        }
+
+        function programmaticCellNavigation_cbxNavchangeHandler(evt) {
+            //grid.gotoItem(cbxNav.selectedItem);
+            var grid=window.parent.grid;
+            grid.gotoKey(cbxNav.selectedItem.id,true);//the second parameter does the hover over...
+        }
+
+    </script>
+    <link rel="stylesheet" href="../../css/index.css" type="text/css"/>
+</head>
+<body>
+    Navigate To:<select  id="cbxNav" style="width:150px">
+                </select>
+
+    <a class="button" onclick="programmaticCellNavigation_handleSelectItem(event)"/>Select Item</a>
+    <a class="button" onclick="programmaticCellNavigation_handleClearSelection(event)"/>Clear Selection</a><br>
+    <input type="text" id="txtFind" maxlength="200" onkeydown="programmaticCellNavigation_keyDownHandler(event)"
+           onchange="programmaticCellNavigation_txtFindChangeHandler(event)"/>
+    <!--<mx:Label text="{matchedObjects.length?'Item ' + currentMatch + ' of '+ matchedObjects.length + ' Items Found.':'No Items Found'}"/>-->
+    <span>No Items found</span>
+
+</body>
+</html>

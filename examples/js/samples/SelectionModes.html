@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Selection Modes</title>
+    <script type="text/javascript">
+        function radioClick(event, mode) {
+            var grid = window.parent.grid;
+            grid.clearSelection();
+            grid.enableStickyControlKeySelection=true;
+            grid.setSelectionMode(mode);
+            var cbSinlgeRow=document.getElementById('cbSinlgeRow');
+            var cbCol=grid.getColumns()[0];
+            if (cbCol.radioButtonMode != cbSinlgeRow.checked) {
+                cbCol.radioButtonMode = cbSinlgeRow.checked;
+                grid.reDraw();
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="../../css/index.css" type="text/css"/>
+</head>
+<body>
+<div style="float:left;width: 100%">
+    <input type="radio" name="selectionMode" onclick="radioClick(event,'singleCell')"/>Single Cell
+    <input type="radio" name="selectionMode" onclick="radioClick(event,'multipleCells')"/>Multiple Cell
+    <input type="radio" id="cbSinlgeRow" name="selectionMode"
+           onclick="radioClick(event,'singleRow')"
+            />Single Row
+    <input type="radio" name="selectionMode" checked
+           onclick="radioClick(event,'multipleRows')"/>Multiple Rows
+    <input type="radio" name="selectionMode"
+           onclick="radioClick(event,'multipleRows');window.parent.grid.enableStickyControlKeySelection=false;"/>Multiple Rows (CTRL-Click)
+    <input type="radio"   name="selectionMode" onclick="radioClick(event,'none')"/>None
+    <a class="button" onclick="window.parent.grid.clearSelection()"/>Clear</a>
+    <a class="button"  onclick="alert('Selected Keys:' + window.parent.grid.getSelectedKeys().join('|'))" >Show Selected</a>
+
+</div>
+</body>
+</html>

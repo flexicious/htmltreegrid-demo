@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript">
+        function getChanges(){
+            var textArea = document.getElementById('txtChanges');
+            if(!textArea)return;
+            textArea.value = window.parent.grid.getChanges().join("\n");
+        }
+    </script>
+    <link rel="stylesheet" href="../../css/index.css" type="text/css"/>
+</head>
+<body onload="getChanges()">
+<fieldset id="myFieldset" >
+    <legend>Changes</legend>
+    <textarea rows="5" id="txtChanges" style="width:100%"
+              readonly></textarea>
+    <a class="button" id="" onclick="getChanges()" href="#">Get Changes</a>
+</fieldset>
+</body>
+</html>

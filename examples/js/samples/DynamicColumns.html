@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Add and Remove Last Stock Price Column</title>
+    <script type="text/javascript">
+        function handleAddLastStockPriceColumn() {
+            var grid = window.parent.grid;
+            var col= window.parent.myCompanyNameSpace.DynamicColumns_addCurrencyColumn("lastStockPrice","Last Stock Price")
+            grid.addColumn(col);
+            grid.distributeColumnWidthsEqually();
+            grid.reDraw();
+        }
+
+        function handleRemoveLastStockPriceColumn() {
+            var grid = window.parent.grid;
+            grid.removeColumn(grid.getColumnByDataField("lastStockPrice"));
+            grid.distributeColumnWidthsEqually();
+            grid.reDraw();
+        }
+    </script>
+    <link rel="stylesheet" href="../../css/index.css" type="text/css"/>
+</head>
+<body>
+<a class="button" onclick="handleAddLastStockPriceColumn()"/>Add Last Stock Price Column</a>
+<a class="button" onclick="handleRemoveLastStockPriceColumn()"/>Remove Last Stock Price Column</a>
+</body>
+</html>

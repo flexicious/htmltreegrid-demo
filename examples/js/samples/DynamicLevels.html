@@ -1,0 +1,19 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Dynamic Levels</title>
+    <script type="text/javascript">
+        function dynamiclevels_handleClick() {
+            var grid = window.parent.grid;
+            grid.setOpenKeys(["SW","AR"]);
+            grid.setSelectedKeys(["BJ","TS"]);
+        }
+    </script>
+    <link rel="stylesheet" href="../../css/index.css" type="text/css"/>
+</head>
+<body>
+
+<a class="button" onclick="dynamiclevels_handleClick()"/>Select BJ,TS Programatically</a>
+</body>
+</html>

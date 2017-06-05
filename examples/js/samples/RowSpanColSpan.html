@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Row and Column Radio Buttons</title>
+    <script type="text/javascript">
+        function handleRowSpanClick(evt) {
+            window.parent.myCompanyNameSpace.rowSpanColSpan_handleRowSpanClick();
+        }
+
+        function handleColumnSpanClick(evt) {
+            window.parent.myCompanyNameSpace.rowSpanColSpan_handleColumnSpanClick();
+        }
+    </script>
+    <link rel="stylesheet" href="../../css/index.css" type="text/css"/>
+</head>
+<body>
+<div align="left">
+    <input type="radio" name="rowspancolspan" value="Use Row Span"  onclick="handleRowSpanClick(event)" checked>Use Row Span
+    <input type="radio" name="rowspancolspan" value="Use Column Span" onclick="handleColumnSpanClick(event)">Use Column Span
+</div>
+</body>
+</html>

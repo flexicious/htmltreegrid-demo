@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Selection Options</title>
+    <script type="text/javascript">
+        function selectionOptions_btnRefreshclickHandler() {
+            var grid = window.parent.grid;
+            grid.setDataProvider(window.parent.myCompanyNameSpace.FlexiciousMockGenerator.getMockNestedData());//the getter will create a new instance
+            window.parent.myCompanyNameSpace.selectionOptions_mdg_changeHandler(null);
+        }
+        function handleUseSelectionExclusion(evt) {
+            window.parent.myCompanyNameSpace.selectionOptions_UseSelectionExclusion(evt);
+        }
+        function handleSelectionCascadeBubble(evt) {
+            window.parent.myCompanyNameSpace.selectionOptions_SelectionCascadeBubble(evt);
+        }
+        function handleDisableSelectionforaRow(evt) {
+            window.parent.myCompanyNameSpace.selectionOptions_DisableSelectionforaRow(evt);
+        }
+        function handleClearOpenItemsonDataproviderRefresh(evt) {
+            window.parent.myCompanyNameSpace.selectionOptions_ClearOpenItemsonDataproviderRefresh(evt);
+        }
+        function handleClearSelectedItemsonDataproviderRefresh(evt) {
+            window.parent.myCompanyNameSpace.selectionOptions_handleClearSelectedItemsonDataproviderRefresh(evt);
+        }
+        function getChanges(){
+            var frameDoc = document;
+            if(!frameDoc)return;
+            var grid = window.parent.grid;
+            if(!frameDoc.getElementById("lblSelectedKeys"))return;
+            frameDoc.getElementById("lblSelectedKeys").value=(grid.getSelectedKeys().join("\n"));
+            frameDoc.getElementById("lblUnSelectedKeys").value=(grid.getUnSelectedKeys().join("\n"));
+            frameDoc.getElementById("lblOpenKeys").value=(grid.getOpenKeys().join("\n"));
+        }
+    </script>
+    <link rel="stylesheet" href="../../css/index.css" type="text/css"/>
+</head>
+<body onload="getChanges()">
+<div style="float:left;">
+    <input type="checkbox"  value="Use Selection Exclusion" onclick="handleUseSelectionExclusion(event)">Use Selection Exclusion
+    <input type="checkbox"  value="Selection Cascade/Bubble" checked onclick="handleSelectionCascadeBubble(event)">Selection Cascade/Bubble
+    <input type="checkbox"  value="Disable Selection for a Row" onclick="handleDisableSelectionforaRow(event)">Disable Selection for a Row<br>
+    <input type="checkbox"  value="Clear Open Items on Dataprovider Refresh" onclick="handleClearOpenItemsonDataproviderRefresh(event)">Clear Open Items on Dataprovider Refresh
+    <input type="checkbox"  value="Clear Selected Items on Dataprovider Refresh" onclick="handleClearSelectedItemsonDataproviderRefresh(event)">Clear Selected Items on Dataprovider Refresh
+    <a class="button" onclick="selectionOptions_btnRefreshclickHandler()"/>Refresh DataProvider</a>
+
+</div>
+<div style="float:left;clear:both;">
+
+    <textarea id="lblSelectedKeys" style="width:30%" rows="5"></textarea>
+    <textarea id="lblUnSelectedKeys"  style="width:30%" rows="5"></textarea>
+    <textarea id="lblOpenKeys"  style="width:30%" rows="5"></textarea>
+</div>
+
+</body>
+</html>

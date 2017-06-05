@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Virtual Scroll Test</title>
+    <script type="text/javascript">
+        var grid = window.parent.grid;
+        function cbDrawAsYouScroll_handleChange(selected) {
+
+            grid.enableDrawAsYouScroll=selected;
+        }
+        function cbShowSpinner_handleChange(selected) {
+            grid.showSpinnerOnFilterPageSort=selected;
+        }
+        function txtScrollDelay_handleChange(val) {
+            grid.virtualScrollDelay=parseInt(val);
+        }
+        function btnProgramaticScrollDispatch_handleChange(evt) {
+            grid.getBodyContainer()['doScroll'].apply();
+        }
+    </script>
+    <link rel="stylesheet" href="../../css/index.css" type="text/css"/>
+</head>
+<body>
+
+<input type="checkbox" class="cbDrawAsYouScroll"  onchange="cbDrawAsYouScroll_handleChange(this.checked)" >Draw As you Scroll
+<input type="checkbox" class="cbShowSpinner" onchange="cbShowSpinner_handleChange(this.checked)">Draw As you Scroll
+<label>Scroll Delay (msec)</label>
+<input type="text" class="txtScrollDelay" onchange="txtScrollDelay_handleChange(this.value)"><br>
+<textarea rows="" cols="" class="txtRecords"/>
+<label>Open Positions:</label>
+<textarea rows="" cols="" class="txtOpen"/>
+<label>Scroll Position: + grid.verticalScrollPosition.toString()+</label>
+<a class="button" onclick="btnProgramaticScrollDispatch_handleChange(event)"/>Programatic Scroll Dispatch</a>
+
+</body>
+</html>

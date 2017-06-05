@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Set Filter Value</title>
+    <script type="text/javascript">
+        if (!Array.indexOf) {
+            //IE does not support Array.indexOf
+            Array.prototype.indexOf = function (obj, startIndex) {
+                var i;
+                startIndex = startIndex || 0;
+                for (i = startIndex; i < this.length; i += 1) {
+                    if (this[i] === obj) {
+                        return i;
+                    }
+                }
+                return -1;
+            };
+        }
+        function handlesetFilterValue() {
+            var grid = window.parent.grid;
+            var arr = new Array();
+            arr.push("NY");
+            arr.push("CT");
+            grid.setFilterValue("state",arr);
+        }
+    </script>
+    <link rel="stylesheet" href="../../css/index.css" type="text/css"/>
+</head>
+<body>
+<a class="button" onclick="handlesetFilterValue()"/>Set Filter Value</a>
+</body>
+</html>

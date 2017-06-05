@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Dynamic Grouping</title>
+    <script type="text/javascript">
+        function dynamicgrouping_handleGroupClick(prop) {
+          window.parent.myCompanyNameSpace.dynamicGrouping_groupBy(prop);
+        }
+    </script>
+    <link rel="stylesheet" href="../../css/index.css" type="text/css"/>
+</head>
+<body>
+
+<select id="groupingField">
+    <option value="invoice.id" selected> Invoice Number</option>
+    <option value="invoice.invoiceStatus.name">Invoice Status</option>
+    <option value="invoice.deal.dealDescription">Deal</option>
+    <option value="invoice.deal.dealStatus.name">Deal Status</option>
+    <option value="invoice.deal.customer.legalName">Customer</option>
+    <option value="invoice.deal.customer.headquarterAddress.city.name">City</option>
+    <option value="invoice.deal.customer.headquarterAddress.state.name">State</option>
+    <option value="invoice.deal.customer.headquarterAddress.country.name">Country</option>
+
+</select>
+<a class="button" onclick="dynamicgrouping_handleGroupClick(document.getElementById('groupingField').value)"/>Group</a>
+</body>
+</html>
