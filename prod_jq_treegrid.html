@@ -1,0 +1,206 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Grid Test</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<script type="text/javascript" src="external/js/adapters/jquery/jquery-1.8.2.js"></script>
+<script type="text/javascript" src="external/js/adapters/jquery/jquery-ui-1.9.1.custom.min.js"></script>
+<script type="text/javascript" src="external/js/adapters/jquery/jquery.maskedinput-1.3.js"></script>
+<script type="text/javascript" src="external/js/adapters/jquery/jquery.watermarkinput.js"></script>
+<script type="text/javascript" src="external/js/adapters/jquery/jquery.ui.menu.js"></script>
+<script type="text/javascript" src="external/js/adapters/jquery/jquery.toaster.js"></script>
+
+<script type="text/javascript" src="minified-compiled-jquery.js"></script>
+
+
+<script type="text/javascript" src="examples/js/Configuration.js"></script>
+<script type="text/javascript" src="themes.js"></script>
+
+<script type="text/javascript" src="examples/js/mocks/SampleData.js"></script>
+<script type="text/javascript" src="examples/js/mocks/MockGenerator.js"></script>
+<script type="text/javascript" src="examples/js/mocks/MockDataStructures.js"></script>
+
+
+<script type="text/javascript" src="examples/js/samples/Simple.js" id="script_Simple"></script>
+<script type="text/javascript" src="examples/js/samples/ColumnLockModes.js" id="script_ColumnLockModes"></script>
+<script type="text/javascript" src="examples/js/samples/Nested.js" id="script_Nested"></script>
+<script type="text/javascript" src="examples/js/samples/ToolbarActions.js" id="script_ToolbarActions"></script>
+<script type="text/javascript" src="examples/js/samples/VariableRowHeight.js" id="script_VariableRowHeight"></script>
+<script type="text/javascript" src="examples/js/samples/GroupedData.js" id="script_GroupedData"></script>
+<script type="text/javascript" src="examples/js/samples/NestedToolbarActions.js" id="script_NestedToolbarActions"></script>
+<script type="text/javascript" src="examples/js/samples/AutoResizingGrid.js" id="script_AutoResizingGrid"></script>
+<script type="text/javascript" src="examples/js/samples/ChangeTrackingAPI.js" id="script_ChangeTrackingAPI"></script>
+<script type="text/javascript" src="examples/js/samples/CustomReportExample.js" id="script_CustomReportExample"></script>
+<script type="text/javascript" src="examples/js/samples/DragDropGrid.js"  id="script_DragDropGrid"></script>
+<script type="text/javascript" src="examples/js/samples/DynamicColumns.js"  id="script_DynamicColumns"></script>
+<script type="text/javascript" src="examples/js/samples/DynamicGrouping.js"  id="script_DynamicGrouping"></script>
+<script type="text/javascript" src="examples/js/samples/DynamicLevels.js"  id="script_DynamicLevels"></script>
+<script type="text/javascript" src="examples/js/samples/EditableCells.js" id="script_EditableCells"></script>
+<script type="text/javascript" src="examples/js/samples/ErrorHandling.js" id="script_ErrorHandling"></script>
+<script type="text/javascript" src="examples/js/samples/ExternalFilter.js" id="script_ExternalFilter"></script>
+<script type="text/javascript" src="examples/js/samples/FlexiciousGrid.js" id="script_FlexiciousGrid"></script>
+<script type="text/javascript" src="examples/js/samples/FullyLazyLoaded.js" id="script_FullyLazyLoaded"></script>
+<script type="text/javascript" src="examples/js/samples/IconColumns.js" id="script_IconColumns"></script>
+<script type="text/javascript" src="examples/js/samples/ItemRenderers.js" id="script_ItemRenderers"></script>
+<script type="text/javascript" src="examples/js/samples/GroupedData2.js" id="script_GroupedData2"></script>
+<script type="text/javascript" src="examples/js/samples/LargeDataset.js" id="script_LargeDataset"></script>
+<script type="text/javascript" src="examples/js/samples/LargeDynamicGrid.js" id="script_LargeDynamicGrid"></script>
+<script type="text/javascript" src="examples/js/samples/ProgramaticCellFormatting.js"  id="script_ProgramaticCellFormatting"></script>
+<script type="text/javascript" src="examples/js/samples/RowSpanColSpan.js" id="script_RowSpanColSpan"></script>
+<script type="text/javascript" src="examples/js/samples/SelectionModes.js" id="script_SelectionModes"></script>
+<script type="text/javascript" src="examples/js/samples/CustomMatchFilterControl.js" id="script_CustomMatchFilterControl"></script>
+<script type="text/javascript" src="examples/js/samples/SelectionUI1.js" id="script_SelectionUI1"></script>
+<script type="text/javascript" src="examples/js/samples/SelectionUI2.js" id="script_SelectionUI2"></script>
+<script type="text/javascript" src="examples/js/samples/TraderView.js"  id="script_TraderView"></script>
+<script type="text/javascript" src="examples/js/samples/FilterComboBoxDataProvider.js"  id="script_FilterComboBoxDataProvider"></script>
+<script type="text/javascript" src="examples/js/samples/Localization.js" id="script_Localization"></script>
+<script type="text/javascript" src="examples/js/samples/OnlyOneItemOpen.js" id="script_OnlyOneItemOpen"></script>
+<script type="text/javascript" src="examples/js/samples/SiblingColumnsColumnGroups.js" id="script_SiblingColumnsColumnGroups"></script>
+<script type="text/javascript" src="examples/js/samples/SortNumeric.js" id="script_SortNumeric"></script>
+<script type="text/javascript" src="examples/js/samples/VirtualScrollTest.js" id="script_VirtualScrollTest"></script>
+<script type="text/javascript" src="examples/js/samples/MultiSelectSetFilterValue.js" id="script_MultiSelectSetFilterValue"></script>
+<script type="text/javascript" src="examples/js/samples/VariableHeaderRowHeight.js" id="script_VariableHeaderRowHeight"></script>
+<script type="text/javascript" src="examples/js/samples/MultipleGrouping_Manual.js" id="script_MultipleGrouping_Manual"></script>
+<script type="text/javascript" src="examples/js/samples/LegacyGrid.js" id="script_LegacyGrid"></script>
+<script type="text/javascript" src="examples/js/samples/LevelRenderers.js" id="script_LevelRenderers"></script>
+<script type="text/javascript" src="examples/js/samples/LevelRenderers2.js" id="script_LevelRenderers2"></script>
+<script type="text/javascript" src="examples/js/samples/NestedData.js" id="script_NestedData"></script>
+<script type="text/javascript" src="examples/js/samples/NestedUI.js" id="script_NestedUI"></script>
+<script type="text/javascript" src="examples/js/samples/OutlookGroupedData.js" id="script_OutlookGroupedData"></script>
+<script type="text/javascript" src="examples/js/samples/PartialLazyLoaded.js" id="script_PartialLazyLoaded"></script>
+<script type="text/javascript" src="examples/js/samples/ProgamaticCellPainting.js" id="script_ProgamaticCellPainting"></script>
+<script type="text/javascript" src="examples/js/samples/ProgramaticCellNavigation.js" id="script_ProgramaticCellNavigation"></script>
+<script type="text/javascript" src="examples/js/samples/SelectionOptions.js" id="script_SelectionOptions"></script>
+<script type="text/javascript" src="examples/js/samples/ShowOnHoverGrid.js" id="script_ShowOnHoverGrid"></script>
+<script type="text/javascript" src="examples/js/samples/SpinnerExample.js" id="script_SpinnerExample"></script>
+<script type="text/javascript" src="examples/js/samples/StylesDemo.js" id="script_StylesDemo"></script>
+<script type="text/javascript" src="examples/js/samples/VirtualScroll.js" id="script_VirtualScroll"></script>
+<script type="text/javascript" src="examples/js/samples/XmlData.js" id="script_XmlData"></script>
+<script type="text/javascript" src="examples/js/samples/XmlGroupedData.js" id="script_XmlGroupedData"></script>
+<script type="text/javascript" src="examples/js/samples/CustomFooter.js" id="script_CustomFooter"></script>
+<script type="text/javascript" src="examples/js/samples/ColumnWidthMode.js" id="script_ColumnWidthMode"></script>
+
+<script type="text/javascript" src="examples/js/prettify/prettify.js"></script>
+<script type="text/javascript" src="examples/js/prettify/lang-css.js"></script>
+<script type="text/javascript" src="examples/js/index.js"></script>
+
+    <script type="text/javascript" src="external/js/thirdparty/html2canvas.js"></script>
+    <script type="text/javascript" src="external/js/thirdparty/jspdf-combined.js"></script>
+
+<link rel="stylesheet" href="examples/css/index.css" type="text/css"/>
+<link rel="stylesheet" href="examples/js/prettify/prettify.css" type="text/css"/>
+<link rel="stylesheet" href="flexicious/css/flexicious.css" type="text/css"/>
+<link rel="stylesheet" href="external/css/adapter/jquery/jquery-ui-1.9.1.custom.min.css" type="text/css"/>
+
+</head>
+<!--
+<body onload="myCompanyNameSpace.onBodyLoad();myCompanyNameSpace.SizeTabs();">
+-->
+<body onload="myCompanyNameSpace.onBodyLoad();myCompanyNameSpace.SizeTabs();">
+<div id="loader"><div id="loaderInner" >Please wait as we load samples, documentation, libraries and generate sample data. This might take upto 10 seconds. </div></div>
+
+<div id="container">
+
+    <div id="navbar">
+
+    </div>
+
+    <div id="content">
+        <div style="float: left; font-weight: bold;">Example Name&nbsp;:&nbsp;</div><div id="lblName">&nbsp;</div> <div  style="float: left; font-weight: bold;">Description&nbsp;:&nbsp;</div><div id="lblDescription">&nbsp;</div>
+
+        <div id="tabs" style="width:100%;height: 100%;position: relative;">
+            <ul>
+                <li><a href="#tabs-1">Demo</a></li>
+                <li><a href="#tabs-2">Explanation</a></li>
+                <li><a href="#tabs-3">Source</a></li>
+                <li><a href="#tabs-4">Themes</a></li>
+            </ul>
+            <div id="tabs-1" style="margin: 20px; padding:0;">
+                <a class="button" onclick="myCompanyNameSpace.showSettings();" id="btnSettings" style="position: absolute;top: 10px;right: 10px;display: none;color: #FFFFFF">Settings</a>
+                <div id="gridContainer" style="padding:0;width:100%;height: 99%"></div>
+            </div>
+            <div id="tabs-2" style="margin:20px; padding:0">
+                <iframe id="explanationFrame" style="padding:0" frameborder="0"></iframe>
+            </div>
+            <pre id="tabs-3" style="overflow:scroll; margin:20px; padding:0" class="prettyprint"></pre>
+            <div id="tabs-4" style="margin:20px; padding:0">
+                <div id="themeContainer" style="padding:0;width:100%;height: 99%"></div>
+            </div>
+
+        </div>
+    </div>
+    <script type="text/javascript">
+
+        $(function() {
+            $( "#tabs" ).tabs({
+                activate: function( event, ui ) {
+                    if(ui.newTab.text()=='Demo'){
+                        myCompanyNameSpace.reloadConfig();
+                    }
+                },selected: null
+            });
+        });
+
+        myCompanyNameSpace.gotoTab=function(idx){
+            $("#tabs").tabs();
+            $('#tabs').tabs('option', 'selected', 0); ;
+        };
+        myCompanyNameSpace.SizeTabs=function() {//this is for jquery only
+            var width = $("#tabs").width() - 40;
+            var height = $("#tabs").height() - 120;
+            $("#explanationFrame").width(width);
+            $("#tabs-3").width(width);
+            $("#tabs-2").width(width);
+            $("#tabs-1").width(width);
+            $("#tabs-4").width(width);
+
+            $("#explanationFrame").height(height);
+            $("#tabs-3").height(height);
+            $("#tabs-2").height(height);
+            $("#tabs-1").height(height);
+            $("#tabs-4").height(height);
+        }
+
+        $(window).resize(function() {
+            myCompanyNameSpace.SizeTabs();
+        });
+
+        myCompanyNameSpace.MenuBuilder = {
+            MakeNavMenu:function(parent, write_div_id) {
+                var allExamples=myCompanyNameSpace.allExamples;
+                if(!parent) {
+                    this.GetRoots(function(allex) {
+                        var html = "<ul><li><span>"+allex.name+"</span><ul>";
+                        for(var i = 0; i < allExamples.length; i++) {
+                            var temp_allex = allExamples[i];
+                            if(temp_allex.parent && temp_allex.parent === allex.id) {
+                                html += "<li><a href=\"javascript:void(0)\"' onclick=\"myCompanyNameSpace.MenuBuilder.LoadExample("+i+")\">"+temp_allex.name+"</a></li>";
+                            }
+                        }
+                        html += "</ul></li></ul>";
+                        $(write_div_id).html(html);
+                    });
+                }
+            },
+            GetRoots:function(callback) {
+                var allExamples=myCompanyNameSpace.allExamples;
+                for(var i = 0; i < allExamples.length; i++) {
+                    var allex = allExamples[i];
+                    if(!allex.parent) {
+                        callback(allex);
+                    }
+                }
+            },
+            LoadExample:function(index) {
+                var allExamples=myCompanyNameSpace.allExamples;
+                var item = allExamples[index];
+                myCompanyNameSpace.loadExample(item.id,item.dataProvider,item.showIFrame,item.iframeWidth,item.iframeHeight,item.styles);
+            }
+        };
+        myCompanyNameSpace.MenuBuilder.MakeNavMenu(null, "#navbar");
+    </script>
+</div>
+
+</body>
+</html>
